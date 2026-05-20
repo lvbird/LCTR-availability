@@ -1,0 +1,41 @@
+# ── Internal tools & IDE ─────────────────────────────────────────────────────
+AGENTS.md
+.vscode/
+nature-skills-main/
+
+# ── Draft manuscripts (not part of code availability) ────────────────────────
+source_manuscript/
+Final_for_NC/
+
+# ── NC submission figure set (full-size TIFFs prepared for the journal) ──────
+Full_size_figures/
+
+# ── Large raw CMIP6 climate downloads ────────────────────────────────────────
+CMIP6/data/
+
+# ── Script-generated figure output directories (regenerated on demand) ───────
+# Run the figures_scripts/*.py to regenerate these locally.
+Figures_BCC-CSM2-MR_3hr/
+Figures_MRI-ESM2-0_3hr/
+
+# ── Python cache ─────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── OS files ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Baidu Sync conflict copies ───────────────────────────────────────────────
+*冲突文件*
+
+# TIFF files too large for GitHub (use PNG/PDF for reference)
+*.tif
