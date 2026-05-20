@@ -300,9 +300,9 @@ for ax, city in zip(axes, CITIES):
 
 axes[0].legend(loc='upper right', fontsize=11, frameon=True)
 
-out_png = OUT_DIR / 'Figure_Sensitivity_LCTR.png'
-out_pdf = OUT_DIR / 'Figure_Sensitivity_LCTR.pdf'
-out_tif = OUT_DIR / 'Figure_Sensitivity_LCTR.tif'
+out_png = OUT_DIR / 'FigureS1_Sensitivity_LCTR.png'
+out_pdf = OUT_DIR / 'FigureS1_Sensitivity_LCTR.pdf'
+out_tif = OUT_DIR / 'FigureS1_Sensitivity_LCTR.tif'
 fig.savefig(out_png, dpi=300, bbox_inches='tight')
 fig.savefig(out_pdf, format='pdf', bbox_inches='tight')
 fig.savefig(out_tif, dpi=600, bbox_inches='tight')

@@ -112,9 +112,9 @@ ax_gz.legend(handles=legend_handles, fontsize=9,
              edgecolor='#cccccc')
 
 # ── Save ──────────────────────────────────────────────────────────────────────
-out_png = OUT_DIR / 'SI_CDH23_Model_Comparison.png'
-out_pdf = OUT_DIR / 'SI_CDH23_Model_Comparison.pdf'
-out_tif = OUT_DIR / 'SI_CDH23_Model_Comparison.tif'
+out_png = OUT_DIR / 'FigS07_CDH23_Model_Comparison.png'
+out_pdf = OUT_DIR / 'FigS07_CDH23_Model_Comparison.pdf'
+out_tif = OUT_DIR / 'FigS07_CDH23_Model_Comparison.tif'
 fig.savefig(out_png, dpi=300, bbox_inches='tight')
 fig.savefig(out_pdf, bbox_inches='tight')
 fig.savefig(out_tif, dpi=600, bbox_inches='tight')

@@ -1,7 +1,6 @@
 # Code & Data Availability — LCTR Study
 
 **Manuscript:** *Lifetime Cooling Temperature Rise (LCTR) of residential air conditioners in China under climate change*
-**Target journal:** Nature Communications
 **Last updated:** 2026-05-20
 
 ---
@@ -25,14 +24,14 @@ availability/
 │       └── MRI-ESM2-0_ssp{126,245,585}_TempDist_3hr.xlsx    (6 files)
 │
 ├── RAC_inputs/
-│   └── RAC_EER模拟结果.xlsx           ← thermodynamic simulation outputs (EER/SEER tables)
+│   └── RAC_EER_simulation_result.xlsx           ← thermodynamic simulation outputs (EER/SEER tables)
 │
 ├── RAC_market/                       ← RAC stock & sales projection scripts and data
 │   ├── Stock_prediction.py
 │   ├── National_sales_estimation_ssp245_weibull.py
 │   ├── Analyze_weibull_sales.py
-│   ├── Draw_smoothcal.py             ← generates Supp. Fig. S12 (provincial AC penetration)
-│   ├── Draw_national_stock_sales_ssp245.py  ← generates Supp. Fig. S13 (national stock & sales)
+│   ├── Draw_smoothcal.py             ← generates Supp. Fig. S11 (provincial AC penetration)
+│   ├── Draw_national_stock_sales_ssp245.py  ← generates Supp. Fig. S12 (national stock & sales)
 │   ├── AC_stock_forecast_by_province_2025_2050_smoothcal.xlsx
 │   ├── household_size.xlsx
 │   ├── population.xlsx
@@ -60,14 +59,14 @@ availability/
 ├── figures_scripts/                  ← Python scripts to regenerate all manuscript figures
 │   ├── figure_io.py                  ← shared Excel/CSV reader helper
 │   ├── prepare_figure_csv_cache.py   ← regenerates figure_csv_cache/ from Excel inputs
-│   ├── generate_figure9_LCTR_concept.py        ← Fig. 1: analytical framework / LCTR concept
+│   ├── generate_figure1_LCTR_concept.py        ← Fig. 1: analytical framework / LCTR concept
 │   ├── generate_figure3_cdh23.py               ← Fig. 3: CDH23 trend (Beijing, Guangzhou)
-│   ├── generate_figure16_region_scatter.py     ← Fig. 4: four-quadrant provincial scatter
+│   ├── generate_figure4_region_scatter.py      ← Fig. 4: four-quadrant provincial scatter
 │   ├── generate_figure6_combined.py            ← Fig. 6: per-cohort LCTR (a) + cumulative (b)
-│   ├── generate_figure_sensitivity.py          ← Supp. Fig. S1: parameter sensitivity
-│   ├── generate_figure20_provincial_LCTR.py    ← Supp. Fig. S7: provincial LCTR bar chart
-│   ├── generate_figureS9_CDH_comparison.py     ← Supp. Fig. S8: CDH23 BCC vs MRI comparison
-│   └── generate_figure8.py                     ← Supp. Fig. S14: refrigerant scenario trajectories
+│   ├── generate_figureS1_sensitivity.py        ← Supp. Fig. S1: parameter sensitivity
+│   ├── generate_figureS6_provincial_LCTR.py    ← Supp. Fig. S6: provincial LCTR bar chart
+│   ├── generate_figureS7_CDH_comparison.py     ← Supp. Fig. S7: CDH23 BCC vs MRI comparison
+│   └── generate_figureS13_refrigerant_scenarios.py  ← Supp. Fig. S13: refrigerant scenario trajectories
 │
 └── Figures/                          ← pre-generated manuscript figures (PDF + PNG + TIFF 600 dpi)
     ├── Fig01_LCTR_Concept.{pdf,png,tif}
@@ -76,11 +75,11 @@ availability/
     ├── Fig04_region_scatter_data.csv
     ├── Fig06_National_LCTR_Combined.{pdf,png,tif}
     ├── FigS01_Sensitivity.{pdf,png,tif}
-    ├── FigS07_Provincial_LCTR.{pdf,png,tif}
-    ├── FigS08_CDH23_Model_Comparison.{pdf,png,tif}
-    ├── FigS12_Provincial_AC_Penetration.{png,tif}
-    ├── FigS13_National_Stock_Sales.{png,tif}
-    └── FigS14_Refrigerant_Scenarios.{png,tif}
+    ├── FigS06_Provincial_LCTR.{pdf,png,tif}
+    ├── FigS07_CDH23_Model_Comparison.{pdf,png,tif}
+    ├── FigS11_Provincial_AC_Penetration.{png,tif}
+    ├── FigS12_National_Stock_Sales.{png,tif}
+    └── FigS13_Refrigerant_Scenarios.{png,tif}
 ```
 
 ---
@@ -96,18 +95,18 @@ $env:MPLBACKEND = "Agg"
 python figures_scripts\prepare_figure_csv_cache.py
 
 # Main manuscript figures
-python figures_scripts\generate_figure9_LCTR_concept.py      # Fig. 1
+python figures_scripts\generate_figure1_LCTR_concept.py      # Fig. 1
 python figures_scripts\generate_figure3_cdh23.py             # Fig. 3
-python figures_scripts\generate_figure16_region_scatter.py   # Fig. 4
+python figures_scripts\generate_figure4_region_scatter.py    # Fig. 4
 python figures_scripts\generate_figure6_combined.py          # Fig. 6 (two-panel)
 
 # Supplementary figures
-python figures_scripts\generate_figure_sensitivity.py        # Supp. Fig. S1
-python figures_scripts\generate_figure20_provincial_LCTR.py  # Supp. Fig. S7
-python figures_scripts\generate_figureS9_CDH_comparison.py   # Supp. Fig. S8
-python RAC_market\Draw_smoothcal.py                          # Supp. Fig. S12
-python RAC_market\Draw_national_stock_sales_ssp245.py        # Supp. Fig. S13
-python figures_scripts\generate_figure8.py                   # Supp. Fig. S14
+python figures_scripts\generate_figureS1_sensitivity.py      # Supp. Fig. S1
+python figures_scripts\generate_figureS6_provincial_LCTR.py  # Supp. Fig. S6
+python figures_scripts\generate_figureS7_CDH_comparison.py   # Supp. Fig. S7
+python RAC_market\Draw_smoothcal.py                          # Supp. Fig. S11
+python RAC_market\Draw_national_stock_sales_ssp245.py        # Supp. Fig. S12
+python figures_scripts\generate_figureS13_refrigerant_scenarios.py  # Supp. Fig. S13
 ```
 
 Scripts save outputs to `Figures_{MODEL}_3hr/` (BCC-CSM2-MR by default).

@@ -177,9 +177,9 @@ ax.legend(handles=handles, fontsize=8.5, loc="lower right", framealpha=0.85,
           title="Climate Zone\n(CDH23 / Grid EM)", title_fontsize=8.5)
 
 plt.tight_layout()
-out_pdf = OUT_DIR / "Figure20_Provincial_LCTR.pdf"
-out_png = OUT_DIR / "Figure20_Provincial_LCTR.png"
-out_tif = OUT_DIR / "Figure20_Provincial_LCTR.tif"
+out_pdf = OUT_DIR / "FigureS6_Provincial_LCTR.pdf"
+out_png = OUT_DIR / "FigureS6_Provincial_LCTR.png"
+out_tif = OUT_DIR / "FigureS6_Provincial_LCTR.tif"
 plt.savefig(out_pdf, format="pdf", bbox_inches="tight", dpi=300)
 plt.savefig(out_png, dpi=300, bbox_inches="tight")
 plt.savefig(out_tif, dpi=600, bbox_inches="tight")

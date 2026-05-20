@@ -129,7 +129,7 @@ def main():
 
     df = build_dataframe()
     df["Zone"] = df.apply(zone, axis=1)
-    df.to_csv(OUT_DIR / "Figure16_region_scatter_data.csv", index=False, encoding="utf-8-sig")
+    df.to_csv(OUT_DIR / "Figure4_region_scatter_data.csv", index=False, encoding="utf-8-sig")
 
     fig, ax = plt.subplots(figsize=(10.5, 7.2), dpi=300)
     scatter = ax.scatter(
@@ -240,9 +240,9 @@ def main():
     ax.grid(True, linestyle="--", linewidth=0.45, alpha=0.35, zorder=0)
 
     fig.tight_layout()
-    out_pdf = OUT_DIR / "Figure16_Region_Scatter.pdf"
-    out_png = OUT_DIR / "Figure16_Region_Scatter.png"
-    out_tif = OUT_DIR / "Figure16_Region_Scatter.tif"
+    out_pdf = OUT_DIR / "Figure4_Region_Scatter.pdf"
+    out_png = OUT_DIR / "Figure4_Region_Scatter.png"
+    out_tif = OUT_DIR / "Figure4_Region_Scatter.tif"
     fig.savefig(out_pdf, format="pdf", bbox_inches="tight", dpi=300)
     fig.savefig(out_png, dpi=300, bbox_inches="tight")
     fig.savefig(out_tif, dpi=600, bbox_inches="tight")

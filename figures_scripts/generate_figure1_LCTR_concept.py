@@ -23,9 +23,9 @@ from pathlib import Path
 
 matplotlib.rcParams['font.family'] = 'Arial'
 
-OUT_PDF = Path(__file__).parent / 'Figure9_LCTR_Concept.pdf'
-OUT_PNG = Path(__file__).parent / 'Figure9_LCTR_Concept.png'
-OUT_TIF = Path(__file__).parent / 'Figure9_LCTR_Concept.tif'
+OUT_PDF = Path(__file__).parent.parent / 'Figures' / 'Figure1_LCTR_Concept.pdf'
+OUT_PNG = Path(__file__).parent.parent / 'Figures' / 'Figure1_LCTR_Concept.png'
+OUT_TIF = Path(__file__).parent.parent / 'Figures' / 'Figure1_LCTR_Concept.tif'
 
 # ===========================================================
 # 1. Physical parameters  (mirrors LCTR_computation.py)

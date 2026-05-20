@@ -91,8 +91,8 @@ def main():
     root = Path(__file__).resolve().parent.parent
     out_dir = root / f"Figures_BCC-CSM2-MR_3hr"
     out_dir.mkdir(exist_ok=True)
-    out = out_dir / 'Figure8_Refrigerant_Scenarios.png'
-    out_tif = out_dir / 'Figure8_Refrigerant_Scenarios.tif'
+    out = out_dir / 'FigureS13_Refrigerant_Scenarios.png'
+    out_tif = out_dir / 'FigureS13_Refrigerant_Scenarios.tif'
     fig.savefig(out, dpi=300, bbox_inches='tight')
     fig.savefig(out_tif, dpi=600, bbox_inches='tight')
     print(f'Saved: {out} / {out_tif}')
