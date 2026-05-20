@@ -2,6 +2,7 @@
 
 **Manuscript:** *Lifetime Cooling Temperature Rise (LCTR) of residential air conditioners in China under climate change*
 **Last updated:** 2026-05-20
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20303579.svg)](https://doi.org/10.5281/zenodo.20303579)
 
 ---
 
